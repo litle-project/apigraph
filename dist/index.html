@@ -1,12 +1,440 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APIGRAPH</title>
-    <link rel="stylesheet" href="styles/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>APIGRAPH</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="libraries/json-tree-viewer/libs/jsonTree/jsonTree.css">
+	<link rel="stylesheet" href="libraries/fontawesome/css/all.min.css">
 </head>
-<body>
-    
+
+<body class="relative">
+
+	<header class="fixed top-0 left-0 right-0">
+		<section id="logo" class="bg-[#1B4242] w-1/4 h-20 flex items-center justify-between p-4">
+			<span class="font-extrabold text-white text-xl">APIGRAPH.io</span>
+			<div id="toggle-sidebar" class="cursor-pointer me-3">
+				<i class="far fa-circle-dot text-slate-300 hover:text-slate-100"></i>
+			</div>
+		</section>
+		<section id="navbar" class="bg-[#1B4242] w-3/4 h-20 flex items-center justify-between p-4">
+			<div id="app-toolkit" class="flex items-center gap-2">
+				<button class="flex items-center bg-[#FFB800] hover:bg-yellow-300 overflow-hidden rounded-md">
+					<span class="px-3">Create New</span>
+					<span class="p-2 bg-orange-400 hover:bg-yellow-500">
+						<i class="fas fa-chevron-down"></i>
+					</span>
+				</button>
+				<button class="flex items-center bg-teal-700 hover:bg-teal-600 text-slate-50 overflow-hidden rounded-md">
+					<span class="p-2">Environtment</span>
+				</button>
+				<form action="">
+					<div class="relative flex items-center bg-transparent rounded overflow-hidden ms-4">
+						<div class="absolute w-10 text-center">
+							<i class="fas fa-search text-slate-400"></i>
+						</div>
+						<input type="text" name="" class="rounded-md py-2 ps-10 w-96 focus:outline-none bg-[#2E5B56] focus:bg-white text-white focus:text-teal-900" placeholder="Search in apigraph here...">
+					</div>
+				</form>
+			</div>
+			<div id="user-toolkit" class="flex items-center justify-end gap-8">
+				<div class="notification-dropdown">
+					<div class="cursor-pointer">
+						<i class="far fa-bell text-slate-300 hover:text-slate-50"></i>
+					</div>
+				</div>
+				<div class="setting-dropdown">
+					<div class="cursor-pointer">
+						<i class="fas fa-gear text-slate-300 hover:text-slate-50"></i>
+					</div>
+				</div>
+				<div class="user-dropdown">
+					<div class="avatar cursor-pointer rounded-full h-10 w-10 bg-slate-300 overflow-hidden flex items-center justify-center">
+
+					</div>
+				</div>
+			</div>
+		</section>
+	</header>
+
+	<section class="flex mt-20">
+		<aside class="bg-[#1B4242] w-1/4 h-screen p-4">
+			<div class="treeview text-white">
+				<ul>
+					<li class="treeview-node">
+						<span class="treeview-toggle">Parent 1</span>
+						<ul class="treeview-submenu hidden">
+							<li class="treeview-node">
+								<span class="treeview-toggle"><i class="far fa-folder fa-fw"></i> Child Folder 1</span>
+								<ul class="treeview-submenu hidden">
+									<li class="treeview-item">
+										<div class="flex gap-3 items-center">
+											<span class="text-end w-1/6">
+												<i class="text-green-500 font-bold">POST</i> 
+											</span> 
+											<span class="w-5/6">
+												Child 2
+											</span>
+										</div>
+									</li>
+									<li class="treeview-item">
+										<div class="flex gap-3 items-center">
+											<span class="text-end w-1/6">
+												<i class="text-blue-500 font-bold">PUT</i> 
+											</span> 
+											<span class="w-5/6">
+												Child 3
+											</span>
+										</div>
+									</li>
+									<li class="treeview-item">
+										<div class="flex gap-3 items-center">
+											<span class="text-end w-1/6">
+												<i class="text-red-500 font-bold">DELETE</i> 
+											</span> 
+											<span class="w-5/6">
+												Child 4
+											</span>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li class="treeview-node">
+								<span class="treeview-toggle"><i class="far fa-folder fa-fw"></i> Child Folder 2</span>
+								<ul class="treeview-submenu hidden">
+									<li class="treeview-item">
+										<div class="flex gap-3 items-center">
+											<span class="text-end w-1/6">
+												<i class="text-green-500 font-bold">POST</i> 
+											</span> 
+											<span class="w-5/6">
+												Child 2
+											</span>
+										</div>
+									</li>
+									<li class="treeview-item">
+										<div class="flex gap-3 items-center">
+											<span class="text-end w-1/6">
+												<i class="text-blue-500 font-bold">PUT</i> 
+											</span> 
+											<span class="w-5/6">
+												Child 3
+											</span>
+										</div>
+									</li>
+									<li class="treeview-item">
+										<div class="flex gap-3 items-center">
+											<span class="text-end w-1/6">
+												<i class="text-red-500 font-bold">DELETE</i> 
+											</span> 
+											<span class="w-5/6">
+												Child 4
+											</span>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li class="treeview-item">
+								<div class="flex gap-3 items-center">
+									<span class="text-end w-1/6">
+										<i class="text-green-500 font-bold">POST</i> 
+									</span> 
+									<span class="w-5/6">
+										Child 2
+									</span>
+								</div>
+							</li>
+							<li class="treeview-item">
+								<div class="flex gap-3 items-center">
+									<span class="text-end w-1/6">
+										<i class="text-blue-500 font-bold">PUT</i> 
+									</span> 
+									<span class="w-5/6">
+										Child 3
+									</span>
+								</div>
+							</li>
+							<li class="treeview-item">
+								<div class="flex gap-3 items-center">
+									<span class="text-end w-1/6">
+										<i class="text-red-500 font-bold">DELETE</i> 
+									</span> 
+									<span class="w-5/6">
+										Child 4
+									</span>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="treeview-node">
+						<span class="treeview-toggle">Parent 2</span>
+						<ul class="treeview-submenu hidden">
+							<li class="treeview-item">
+								<div class="flex gap-3 items-center">
+									<span class="text-end w-1/6">
+										<i class="text-orange-400 font-bold">GET</i> 
+									</span> 
+									<span class="w-5/6">
+										Child 1
+									</span>
+								</div>
+							</li>
+							<li class="treeview-item">
+								<div class="flex gap-3 items-center">
+									<span class="text-end w-1/6">
+										<i class="text-green-500 font-bold">POST</i> 
+									</span> 
+									<span class="w-5/6">
+										Child 2
+									</span>
+								</div>
+							</li>
+							<li class="treeview-item">
+								<div class="flex gap-3 items-center">
+									<span class="text-end w-1/6">
+										<i class="text-blue-500 font-bold">PUT</i> 
+									</span> 
+									<span class="w-5/6">
+										Child 3
+									</span>
+								</div>
+							</li>
+							<li class="treeview-item">
+								<div class="flex gap-3 items-center">
+									<span class="text-end w-1/6">
+										<i class="text-red-500 font-bold">DELETE</i> 
+									</span> 
+									<span class="w-5/6">
+										Child 4
+									</span>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="treeview-node">
+						<span class="treeview-toggle">Parent 3</span>
+						<ul class="treeview-submenu hidden">
+							<li class="treeview-item">
+								<div class="flex gap-3 items-center">
+									<span class="text-end w-1/6">
+										<i class="text-orange-400 font-bold">GET</i> 
+									</span> 
+									<span class="w-5/6">
+										Child 1
+									</span>
+								</div>
+							</li>
+							<li class="treeview-item">
+								<div class="flex gap-3 items-center">
+									<span class="text-end w-1/6">
+										<i class="text-green-500 font-bold">POST</i> 
+									</span> 
+									<span class="w-5/6">
+										Child 2
+									</span>
+								</div>
+							</li>
+							<li class="treeview-item">
+								<div class="flex gap-3 items-center">
+									<span class="text-end w-1/6">
+										<i class="text-blue-500 font-bold">PUT</i> 
+									</span> 
+									<span class="w-5/6">
+										Child 3
+									</span>
+								</div>
+							</li>
+							<li class="treeview-item">
+								<div class="flex gap-3 items-center">
+									<span class="text-end w-1/6">
+										<i class="text-red-500 font-bold">DELETE</i> 
+									</span> 
+									<span class="w-5/6">
+										Child 4
+									</span>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</aside>
+		<main class="bg-[#ffffff] w-3/4 h-screen overflow-auto">
+			<section id="api-description">
+				<div class="flex gap-2 items-center justify-between p-3 bg-[#C4E5D9]">
+					<div class="flex gap-2 items-center justify-start">
+						<div class="rounded-md py-2 px-4 bg-[#1B4242]">
+							<span class="text-orange-400 font-semibold">GET</span> 
+						</div>
+						<h1 class="text-2xl font-semibold text-teal-900">Get Task By Id</h1>
+					</div>
+					<div class="flex gap-5 items-center justify-end">
+						<div id="view-mode-dropdown">
+							<button class="flex gap-3 items-center py-2 px-3 bg-[#E4FFE4] hover:bg-[#cbfacb] text-teal-900 overflow-hidden rounded-md">
+								<span>View Mode</span>
+								<i class="fas fa-chevron-down"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="p-4">
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla suscipit laborum fugiat eum ullam nesciunt voluptatum fugit vitae consequuntur voluptas ducimus mollitia iure veritatis, alias ab? Ab voluptatem quasi quidem aut ea iusto dolore iure tempora architecto a ut delectus neque eaque omnis inventore, numquam, non ullam saepe labore odio unde, eos quibusdam ex fugit. Voluptates, iure explicabo perspiciatis ea laboriosam minus architecto placeat ut deleniti vel illum expedita perferendis maxime eaque inventore cum aspernatur non? Totam soluta quo illum facere suscipit quas assumenda, tempore nostrum hic sunt quod, voluptate minus velit quisquam ratione quidem saepe libero neque. Facere, architecto?
+				</div>
+			</section>
+			<section id="api-testing">
+				<form action="">
+					<div id="api-form" class="flex items-center">
+						<div class="h-20 px-5 w-40 bg-teal-800 flex justify-center items-center">
+							<input type="text" class="bg-transparent w-full text-xl font-bold text-orange-400 focus:outline-none focus:border-0" value="GET">
+							<div class="text-slate-300 hover:text-white cursor-pointer">
+								<i class="fas fa-chevron-down"></i>
+							</div>
+						</div>
+						<div class="h-20 w-full bg-teal-700 flex items-center px-4">
+							<input type="text" class="bg-transparent w-full font-normal text-white focus:outline-none focus:border-0" value="https://apigraph.io/api/v1/user/15667">
+							<button type="submit" class="flex gap-3 items-center py-2 px-8 bg-[#FFB800] hover:bg-yellow-300 overflow-hidden rounded-md">
+								<span class="font-bold text-xl">Try</span>
+								<i class="fas fa-play-circle"></i>
+							</button>
+						</div>
+					</div>
+					<div id="api-params">
+						<div class="flex items-center justify-between px-4 py-2 w-full bg-[#E4FFE4]">
+							<ul class="flex items-center gap-4">
+								<li class="text-slate-500 font-medium py-1 hover:border-b border-slate-800">
+									<a href="">
+										Authorization
+									</a>
+								</li>
+								<li class="text-slate-500 font-medium py-1 hover:border-b border-slate-800">
+									<a href="">
+										Headers
+									</a>
+								</li>
+								<li class="text-slate-500 font-medium py-1 hover:border-b border-slate-800">
+									<a href="">
+										Params
+									</a>
+								</li>
+								<li class="text-slate-800 font-semibold py-1 border-b border-slate-800">
+									<a href="">
+										Body
+									</a>
+								</li>
+							</ul>
+							<span class="cursor-pointer">
+								<i class="fas fa-eye"></i>
+							</span>
+						</div>
+						<div id="body-params" class="overflow-scroll flex flex-col max-h-52">
+							<table class="min-w-full text-left text-sm font-light">
+								<thead class="border-b border-slate-200 font-medium">
+									<tr>
+										<th scope="col" class="px-4 py-4">
+											<input id="params-check-all" class="cursor-pointer" type="checkbox">
+										</th>
+										<th scope="col" class="px-6 py-2">Key</th>
+										<th scope="col" class="px-6 py-2">Value</th>
+										<th scope="col" class="px-6 py-2">Description</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="border-b border-slate-200">
+										<td class="whitespace-nowrap px-4 py-4">
+											<input class="params-check cursor-pointer" type="checkbox">
+										</td>
+										<td class="whitespace-nowrap px-6 py-2">
+											<input type="text" class="p-2 w-full bg-slate-100 focus:outline-none focus:border focus:border-teal-400 rounded-md" placeholder="Type your key">
+										</td>
+										<td class="whitespace-nowrap px-6 py-2">
+											<input type="text" class="p-2 w-full bg-slate-100 focus:outline-none focus:border focus:border-teal-400 rounded-md" placeholder="Type your value">
+										</td>
+										<td class="whitespace-nowrap px-6 py-2">
+											<input type="text" class="p-2 w-full bg-slate-100 focus:outline-none focus:border focus:border-teal-400 rounded-md" placeholder="Type your description">
+										</td>
+									</tr>
+									<tr class="border-b border-slate-200">
+										<td class="whitespace-nowrap px-4 py-4">
+											<input class="params-check cursor-pointer" type="checkbox">
+										</td>
+										<td class="whitespace-nowrap px-6 py-2">
+											<input type="text" class="p-2 w-full bg-slate-100 focus:outline-none focus:border focus:border-teal-400 rounded-md" placeholder="Type your key">
+										</td>
+										<td class="whitespace-nowrap px-6 py-2">
+											<input type="text" class="p-2 w-full bg-slate-100 focus:outline-none focus:border focus:border-teal-400 rounded-md" placeholder="Type your value">
+										</td>
+										<td class="whitespace-nowrap px-6 py-2">
+											<input type="text" class="p-2 w-full bg-slate-100 focus:outline-none focus:border focus:border-teal-400 rounded-md" placeholder="Type your description">
+										</td>
+									</tr>
+									<tr class="border-b border-slate-200">
+										<td class="whitespace-nowrap px-4 py-4">
+											<input class="params-check cursor-pointer" type="checkbox">
+										</td>
+										<td class="whitespace-nowrap px-6 py-2">
+											<input type="text" class="p-2 w-full bg-slate-100 focus:outline-none focus:border focus:border-teal-400 rounded-md" placeholder="Type your key">
+										</td>
+										<td class="whitespace-nowrap px-6 py-2">
+											<input type="text" class="p-2 w-full bg-slate-100 focus:outline-none focus:border focus:border-teal-400 rounded-md" placeholder="Type your value">
+										</td>
+										<td class="whitespace-nowrap px-6 py-2">
+											<input type="text" class="p-2 w-full bg-slate-100 focus:outline-none focus:border focus:border-teal-400 rounded-md" placeholder="Type your description">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</form>
+				<div id="api-responses" class="h-full flex">
+					<div id="api-response-json" class="bg-slate-100 w-full h-full">
+						<div id="header-response-api" class="flex justify-between items-center bg-teal-700 px-4 py-2">
+							<span id="title-response-api" class="text-lg font-normal text-slate-100">Response</span>
+							<div class="flex items-center justify-end gap-6">
+								<ul class="flex items-center gap-3">
+									<li class="text-xs text-slate-100">Size: <span class="text-xs font-semibold">23 kb</span></li>
+									<li class="text-xs text-slate-100">Time: <span class="text-xs font-semibold">23 0,4 ms</span></li>
+									<li class="text-xs text-slate-100">Status: <span class="text-xs font-semibold">200 OK</span></li>
+								</ul>
+								<span class="cursor-pointer">
+									<i class="fas fa-eye text-slate-300"></i>
+								</span>
+							</div>
+						</div>
+						<div id="body-response-api" class="p-4 w-full h-screen overflow-auto">
+							<div id="result-json"></div>
+						</div>
+					</div>
+					<div id="api-response-graphic" class="bg-slate-800 w-full h-full">
+						<div id="header-response-graphic" class="flex justify-between items-center bg-teal-600 px-4 py-2">
+							<span id="title-response-graphic" class="text-lg font-normal text-slate-100">Infographic</span>
+							<div class="flex items-center justify-end gap-6">
+								<span class="cursor-pointer">
+									<i class="fas fa-eye text-slate-300"></i>
+								</span>
+							</div>
+						</div>
+						<div id="body-response-graphic" class="p-4 flex flex-col gap-3 w-full h-screen overflow-auto">
+							<div class="rounded-md bg-white shadow w-full h-auto p-3">
+								<canvas id="result-bar-chart"></canvas>
+							</div>
+							<div class="rounded-md bg-white shadow w-full h-auto p-3">
+								<canvas id="result-pie-chart"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</section>
+
+	<script src="libraries/fontawesome/js/all.min.js"></script>
+	<script src="libraries/json-tree-viewer/libs/jsonTree/jsonTree.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+	<script src="scripts/main.js"></script>
 </body>
+
 </html>
