@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>APIGRAPH</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="flex h-full">
+            <div class="w-1/4 bg-[#1c494a]">
+                <section id="logo" class="bg-[#1b4243] flex items-center justify-between p-4">
+                    <span class="font-extrabold text-white text-xl">APIGRAPH.io</span>
+                    <div class="cursor-pointer">
+                        <img src="assets/circle.svg" class="w-5 h-5 object-cover invert opacity-80">
+                    </div>
+                </section>
+                <ul class="text-white cursor-pointer">
+                    <li>
+                        <div class="flex gap-5 hover:bg-white/20 py-3 px-3 items-center">
+                            <span class="text-xs font-bold">
+                                <i class="fas fa-chevron-right"></i>
+                            </span>
+                            <span>Payment Gateway API</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex gap-4 hover:bg-white/20 py-3 px-3 items-center">
+                            <span class="text-xs font-bold">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                            <span>Transaction API</span>
+                        </div>
+                        <ul class="flex flex-col">
+                            <li class="flex justify-between items-center py-1 pl-12 pr-3 hover:bg-white/20 group">
+                                <div class="flex gap-3">
+                                    <span class="text-green-400 font-bold text-sm">GET</span>
+                                    <span class="text-sm">Get All Transaction</span>
+                                </div>
+                                <div class="relative">
+                                    <span class="opacity-0 group-hover:opacity-100">•••</span>
+                                </div>
+                            </li>
+                            <li class="flex justify-between items-center py-1 pl-12 pr-3 hover:bg-white/20 group">
+                                <div class="flex gap-3">
+                                    <span class="text-orange-400 font-bold text-sm">POST</span>
+                                    <span class="text-sm">Get All Transaction</span>
+                                </div>
+                                <div class="relative">
+                                    <span class="opacity-0 group-hover:opacity-100">•••</span>
+                                </div>
+                            </li>
+                            <li class="flex justify-between items-center py-1 pl-12 pr-3 hover:bg-white/20 group">
+                                <div class="flex gap-3">
+                                    <span class="text-blue-400 font-bold text-sm">PUT</span>
+                                    <span class="text-sm">Get All Transaction</span>
+                                </div>
+                                <div class="relative">
+                                    <span class="opacity-0 group-hover:opacity-100">•••</span>
+                                </div>
+                            </li>
+                            <li class="flex justify-between items-center py-1 pl-12 pr-3 hover:bg-white/20 group">
+                                <div class="flex gap-3">
+                                    <span class="text-red-400 font-bold text-sm">DELETE</span>
+                                    <span class="text-sm">Get All Transaction</span>
+                                </div>
+                                <div class="relative">
+                                    <span class="opacity-0 group-hover:opacity-100">•••</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-[#CDFADB] flex-1">
+                <section id="logo" class="bg-[#1b4243] flex items-center justify-between px-4 py-2.5">
+                    <div class="flex items-center gap-2">
+                        <button class="flex items-center bg-amber-400 hover:bg-amber-500 overflow-hidden rounded-md">
+                            <span class="px-3 font-semibold text-sm">Create New</span>
+                            <span class="p-2.5 bg-orange-400 hover:bg-yellow-500 text-xs font-bold">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </button>
+                        <button class="flex items-center bg-teal-700 hover:bg-teal-600 text-slate-50 overflow-hidden rounded-md">
+                            <span class="p-2 text-sm tracking-wider">Environtment</span>
+                        </button>
+                        <div class="relative flex items-center bg-transparent rounded overflow-hidden">
+                            <div class="absolute w-10 text-center">
+                                <i class="fas fa-search text-slate-400"></i>
+                            </div>
+                            <input class="rounded-md py-2 ps-10 w-96 focus:outline-none bg-[#2E5B56] focus:bg-white text-white focus:text-teal-900 text-sm" placeholder="Search in apigraph here...">
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-end gap-8">
+                        <div class="notification-dropdown">
+                            <div class="cursor-pointer">
+                                <i class="far fa-bell text-slate-300 hover:text-slate-50"></i>
+                            </div>
+                        </div>
+                        <div class="setting-dropdown">
+                            <div class="cursor-pointer">
+                                <i class="fas fa-gear text-slate-300 hover:text-slate-50"></i>
+                            </div>
+                        </div>
+                        <div class="user-dropdown">
+                            <div class="avatar cursor-pointer rounded-full h-10 w-10 bg-slate-300 overflow-hidden flex items-center justify-center">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="bg-teal-800 flex items-center justify-between">
+                    <div class="flex items-center w-full">
+                        <div class="flex items-center gap-5 bg-teal-700 px-5 py-3 cursor-pointer">
+                            <span class="font-bold text-green-400 text-base">GET</span>
+                            <span class="text-white"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="px-5 text-white w-full">
+                            <input type="text" class="outline-none bg-transparent w-full py-2 text-sm" value="https://apigraph.io/api/v1/user/15667" />
+                        </div>
+                    </div>
+                    <div class="px-5">
+                        <button class="flex items-center gap-3 bg-amber-400 hover:bg-amber-500 overflow-hidden rounded-md px-8 py-2">
+                            <span class="font-semibold text-sm">Try</span>
+                            <span><i class="fas fa-play-circle"></i></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between px-4 py-2 w-full bg-green-100">
+                    <ul class="flex items-center gap-4 cursor-pointer text-sm">
+                        <li class="text-slate-500 font-medium py-1 hover:border-b border-slate-800">
+                            Authorization
+                        </li>
+                        <li class="text-slate-500 font-medium py-1 hover:border-b border-slate-800">
+                            Headers
+                        </li>
+                        <li class="text-slate-500 font-medium py-1 hover:border-b border-slate-800">
+                            Params
+                        </li>
+                        <li class="text-slate-800 font-semibold py-1 border-b border-slate-800">
+                            Body
+                        </li>
+                    </ul>
+                    <span class="cursor-pointer"><i class="fas fa-eye"></i></span>
+                </div>
+                <div class="flex bg-white py-3 px-4">
+                    <div class="flex items-center me-4">
+                        <input id="teal-radio" type="radio" checked class="w-4 h-4" name="radio">
+                        <label for="teal-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">none</label>
+                    </div>
+                    <div class="flex items-center me-4">
+                        <input id="teal-radio" type="radio" class="w-4 h-4" name="radio">
+                        <label for="teal-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">form-data</label>
+                    </div>
+                    <div class="flex items-center me-4">
+                        <input id="teal-radio" type="radio" class="w-4 h-4" name="radio">
+                        <label for="teal-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">raw</label>
+                    </div>
+                </div>
+                <div class="overflow-scroll flex flex-col max-h-52 bg-white">
+                    <table class="min-w-full text-left text-sm font-light">
+                        <thead class="border-b font-medium">
+                            <tr class="border">
+                                <th scope="col" class="border text-center">
+                                    <input class="cursor-pointer" type="checkbox">
+                                </th>
+                                <th scope="col" class="border p-2">Key</th>
+                                <th scope="col" class="border p-2">Value</th>
+                                <th scope="col" class="border p-2">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-slate-200 border">
+                                <td class="whitespace-nowrap border text-center">
+                                    <input class="params-check cursor-pointer" type="checkbox">
+                                </td>
+                                <td class="whitespace-nowrap border">
+                                    <input type="text" class="p-2 w-full  bg-transparent focus:outline-none rounded-md" placeholder="Type your key">
+                                </td>
+                                <td class="whitespace-nowrap border">
+                                    <input type="text" class="p-2 w-full  bg-transparent focus:outline-none rounded-md" placeholder="Type your value">
+                                </td>
+                                <td class="whitespace-nowrap border">
+                                    <input type="text" class="p-2 w-full  bg-transparent focus:outline-none rounded-md" placeholder="Type your description">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="flex">
+                    <div class="bg-slate-100 w-1/2">
+                        <div class="flex justify-between items-center bg-teal-700 px-4 py-2">
+                            <span class="text-base font-medium text-slate-100">Response</span>
+                            <div class="flex items-center justify-end gap-6">
+                                <ul class="flex items-center gap-3">
+                                    <li class="text-xs text-slate-100">Size: <span class="text-xs font-semibold">23 kb</span></li>
+                                    <li class="text-xs text-slate-100">Time: <span class="text-xs font-semibold">23 0,4 ms</span></li>
+                                    <li class="text-xs text-slate-100">Status: <span class="text-xs font-semibold">200 OK</span></li>
+                                </ul>
+                                <span class="cursor-pointer">
+                                    <i class="fas fa-eye text-slate-300"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-4 overflow-auto flex flex-wrap">
+                            <div class="text-sm">
+                                <code class="text-teal-800">
+                                    <span class="flex">{</span>
+                                    <span class="flex">
+                                        <span class="indent-5">"code"</span>
+                                        <span class="px-1">:</span>
+                                        <span class="text-green-400">200</span>
+                                    </span>
+                                    <span class="flex">
+                                        <span class="indent-5">"message"</span>
+                                        <span class="px-1">:</span>
+                                        <span class="text-green-400">OK</span>
+                                    </span>
+                                    <span class="flex">
+                                        <span class="indent-5">"data"</span>
+                                        <span class="px-1">:</span>
+                                        <span class="">{</span>
+                                    </span>
+                                    <span class="flex">
+                                        <span class="indent-10">"id"</span>
+                                        <span class="px-1">:</span>
+                                        <span class="text-green-400">ABCD12345</span>
+                                    </span>
+                                    <span class="flex">
+                                        <span class="indent-10">"email"</span>
+                                        <span class="px-1">:</span>
+                                        <span class="text-green-400">user@mail.com</span>
+                                    </span>
+                                    <span class="flex">
+                                        <span class="indent-10">"full_name"</span>
+                                        <span class="px-1">:</span>
+                                        <span class="text-green-400">user jane</span>
+                                    </span>
+                                    <span class="flex">
+                                        <span class="indent-5">}</span>
+                                    </span>
+                                    <span>}</span>
+                                </code>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/2 border-teal-900">
+						<div class="flex justify-between items-center bg-teal-700 px-4 py-2">
+							<span class="flex text-basefont-normal text-slate-100">Infographic</span>
+							<div class="flex items-center justify-end gap-6">
+								<span class="cursor-pointer">
+									<i class="fas fa-eye text-slate-300"></i>
+								</span>
+							</div>
+						</div>
+						<div class="p-4 flex flex-col gap-3 w-full overflow-auto">
+							<div class="flex flex-col items-center justify-center text-gray-700">
+                                <div class="flex flex-col items-center w-full max-w-screen-md p-6 pb-6 bg-white rounded-lg sm:p-8">
+                                    <h2 class="text-xl font-bold">API Performance</h2>
+                                    <span class="text-xs text-gray-500">Last Try : 20 Jun, 2021</span>
+                                    <div class="flex items-end flex-grow w-full mt-2 space-x-2 sm:space-x-3">
+                                        <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                            <div class="relative flex justify-center w-full h-16 bg-indigo-300"></div>
+                                            <div class="relative flex justify-center w-full h-20 bg-indigo-400"></div>
+                                            <span class="absolute bottom-0 text-xs font-bold">17:30</span>
+                                        </div>
+                                        <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                            <div class="relative flex justify-center w-full h-10 bg-indigo-300"></div>
+                                            <div class="relative flex justify-center w-full h-24 bg-indigo-400"></div>
+                                            <span class="absolute bottom-0 text-xs font-bold">19:56</span>
+                                        </div>
+                                        <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                            <div class="relative flex justify-center w-full h-10 bg-indigo-300"></div>
+                                            <div class="relative flex justify-center w-full h-32 bg-indigo-400"></div>
+                                            <span class="absolute bottom-0 text-xs font-bold">20:24</span>
+                                        </div>
+                                        <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                            <div class="relative flex justify-center w-full h-12 bg-indigo-300"></div>
+                                            <div class="relative flex justify-center w-full bg-indigo-400 h-28"></div>
+                                            <span class="absolute bottom-0 text-xs font-bold">14:30</span>
+                                        </div>
+                                        <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                            <div class="relative flex justify-center w-full h-8 bg-indigo-300"></div>
+                                            <div class="relative flex justify-center w-full h-40 bg-indigo-400"></div>
+                                            <span class="absolute bottom-0 text-xs font-bold">02:00</span>
+                                        </div>
+                                        <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                            <div class="relative flex justify-center w-full h-20 bg-indigo-300"></div>
+                                            <span class="absolute bottom-0 text-xs font-bold">20:20</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex w-full mt-3">
+                                        <div class="flex items-center ml-auto">
+                                            <span class="block w-4 h-4 bg-indigo-400"></span>
+                                            <span class="ml-1 text-xs font-medium">Before</span>
+                                        </div>
+                                        <div class="flex items-center ml-4">
+                                            <span class="block w-4 h-4 bg-indigo-300"></span>
+                                            <span class="ml-1 text-xs font-medium">After</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-center flex justify-center">
+                                <div class="bg-white shadow-lg rounded-lg overflow-hidden border-r">
+                                    <div class="px-4 py-2 mb-6 leading-normal bg-grey-lighter flex flex-no-shrink">
+                                        <h3 class="pl-2 text-left m-auto align-middle text-grey-darkest w-full">API Speedometer</h3>
+                                        <button onClick="refreshSpeedOMeter();" class="bg-grey-light float-right hover:bg-grey text-grey-darkest font-bold py-3 px-3 rounded-full inline-flex items-center">
+                                            <svg class="fill-current w-6 h-6 flex-no-shrink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M14.66 15.66A8 8 0 1 1 17 10h-2a6 6 0 1 0-1.76 4.24l1.42 1.42zM12 10h8l-4 4-4-4z"/></svg>
+                                        </button>
+                                    </div>
+                                    <div class="items-center flex justify-center p-4">
+                                        <div class="">
+                                            <div class="speedometr">
+                                                <div class="scale low"></div>
+                                                <div class="scale middle"></div>
+                                                <div class="scale hight"></div>
+                                                <div id="arrow" class="arrow"></div>
+                                            </div>
+                                            <div id="counter" class="text-grey-darkest text-center text-base font-semibold pt-4 pb-0">0.0 Mbps</div>
+                                        </div>
+                                    </div>
+                                    <div class="py-4 px-8 text-sm text-grey-100 bg-grey-lighter leading-normal">
+                                        <p class="font-medium">
+                                            The API has better performance, but small size can make more better,
+                                        </p>
+                                        <br>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ad maxime neque eaque at quod, sapiente, cumque voluptatem consequatur aut cupiditate eveniet similique inventore beatae odio, quisquam perferendis id fugit!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
